@@ -47,7 +47,6 @@ output
 .idea
 *.iml
 *.pyc
-logs/
 *MANIFEST
 *artifacts
 .DS_Store
