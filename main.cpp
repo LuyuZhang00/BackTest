@@ -7,7 +7,7 @@
 
 int main() {
     DataLoader dataLoader;
-    Strategy strategy(5, 20);  // 例如，使用5天和20天的移动平均
+    Strategy strategy(5, 20);  // 使用5天和20天的移动平均
     TradeExecutor executor;
     PortfolioManager portfolioManager;
     StatisticsModule statisticsModule;
@@ -15,7 +15,6 @@ int main() {
     // 加载股票数据
     auto stockData = dataLoader.loadData("/home/zhangluyu/code/BackTest/data/stock_data.csv");
 
-    // 准备存储历史数据和收盘价
     std::vector<StockData> historicalData;
     std::vector<double> closingPrices;
 
@@ -24,14 +23,24 @@ int main() {
         historicalData.push_back(dayData);
         closingPrices.push_back(dayData.close);
 
-        // 确保历史数据有足够的天数来进行策略计算
         if (historicalData.size() >= strategy.getLongWindow()) {
+            // 生成交易信号
             auto signal = strategy.generateSignal(historicalData);
+
+            // 执行交易
             executor.setTradeParameters(dayData.close, 100); // 假设交易100股
             auto tradeResult = executor.executeTrade(signal);
 
-            // 更新投资组合（这里可以根据交易结果调整）
-            // portfolioManager.updatePortfolio(...);
+            // 输出交易结果
+            std::cout << "Trade on " << dayData.date << " - Signal: " << static_cast<int>(signal)
+                      << ", Result: " << tradeResult.message << std::endl;
+
+            // 更新投资组合
+            if (tradeResult.success) {
+                // 假设每个交易都是基于单一股票的
+                // 这里需要根据交易结果更新投资组合
+                portfolioManager.updatePortfolio("STOCK_TICKER", 100, dayData.close);
+            }
         }
     }
 
