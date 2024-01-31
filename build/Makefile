@@ -273,6 +273,30 @@ src/TradeExecutor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.s
 .PHONY : src/TradeExecutor.cpp.s
 
+src/utils/timestamp.o: src/utils/timestamp.cpp.o
+.PHONY : src/utils/timestamp.o
+
+# target to build an object file
+src/utils/timestamp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.o
+.PHONY : src/utils/timestamp.cpp.o
+
+src/utils/timestamp.i: src/utils/timestamp.cpp.i
+.PHONY : src/utils/timestamp.i
+
+# target to preprocess a source file
+src/utils/timestamp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.i
+.PHONY : src/utils/timestamp.cpp.i
+
+src/utils/timestamp.s: src/utils/timestamp.cpp.s
+.PHONY : src/utils/timestamp.s
+
+# target to generate assembly for a file
+src/utils/timestamp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.s
+.PHONY : src/utils/timestamp.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +324,9 @@ help:
 	@echo "... src/TradeExecutor.o"
 	@echo "... src/TradeExecutor.i"
 	@echo "... src/TradeExecutor.s"
+	@echo "... src/utils/timestamp.o"
+	@echo "... src/utils/timestamp.i"
+	@echo "... src/utils/timestamp.s"
 .PHONY : help
 
 

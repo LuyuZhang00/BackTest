@@ -142,7 +142,11 @@ CMakeFiles/TradingStrategyDemo.dir/main.cpp.o: \
  /usr/include/c++/10/bits/locale_facets.tcc \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
- /usr/include/c++/10/bits/istream.tcc \
+ /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/fstream \
+ /usr/include/c++/10/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+ /usr/include/c++/10/bits/fstream.tcc \
  /home/zhangluyu/code/BackTest/include/DataLoader.h \
  /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_uninitialized.h \
  /usr/include/c++/10/bits/stl_vector.h \
@@ -199,4 +203,5 @@ CMakeFiles/TradingStrategyDemo.dir/main.cpp.o: \
  /usr/include/c++/10/tr1/poly_hermite.tcc \
  /usr/include/c++/10/tr1/poly_laguerre.tcc \
  /usr/include/c++/10/tr1/riemann_zeta.tcc \
- /home/zhangluyu/code/BackTest/include/PortfolioManager.h
+ /home/zhangluyu/code/BackTest/include/PortfolioManager.h \
+ /home/zhangluyu/code/BackTest/include/utils/timestamp.h

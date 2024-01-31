@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # 包含头文件目录
 include_directories(include)
+include_directories(include/utils/)
 
 # 添加源文件
 add_executable(TradingStrategyDemo main.cpp
@@ -15,4 +16,6 @@ add_executable(TradingStrategyDemo main.cpp
                src/PortfolioManager.cpp
                src/StatisticsModule.cpp
                src/Strategy.cpp
-               src/TradeExecutor.cpp)
+               src/TradeExecutor.cpp
+               src/utils/timestamp.cpp
+               )

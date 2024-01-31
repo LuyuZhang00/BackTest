@@ -1,9 +1,12 @@
 #include <iostream>
+#include <fstream>
+
 #include "DataLoader.h"
 #include "Strategy.h"
 #include "TradeExecutor.h"
 #include "PortfolioManager.h"
 #include "StatisticsModule.h"
+#include "utils/timestamp.h"
 
 int main() {
     DataLoader dataLoader;
@@ -12,6 +15,14 @@ int main() {
     PortfolioManager portfolioManager;
     StatisticsModule statisticsModule;
 
+    // 定义并打开日志文件
+    std::ofstream logFile("../logs/trade_log.txt");
+    if (!logFile.is_open()) {
+        std::cerr << "Unable to open log file." << std::endl;
+        return 1;
+    }
+
+    std::string timestamp = getTimestamp();
     // 加载股票数据
     auto stockData = dataLoader.loadData("/home/zhangluyu/code/BackTest/data/stock_data.csv");
 
@@ -31,9 +42,11 @@ int main() {
             executor.setTradeParameters(dayData.close, 100); // 假设交易100股
             auto tradeResult = executor.executeTrade(signal);
 
-            // 输出交易结果
-            std::cout << "Trade on " << dayData.date << " - Signal: " << static_cast<int>(signal)
-                      << ", Result: " << tradeResult.message << std::endl;
+            // 将交易结果写入日志文件和输出到终端
+            std::string logEntry = timestamp + "Trade on " + dayData.date + " - Signal: " + std::to_string(static_cast<int>(signal))
+                                   + ", Result: " + tradeResult.message;
+            logFile << logEntry << std::endl;
+            std::cout << logEntry << std::endl;
 
             // 更新投资组合
             if (tradeResult.success) {
@@ -43,6 +56,7 @@ int main() {
             }
         }
     }
+
 
     // 计算并显示统计指标
     auto returnsCurve = statisticsModule.calculateReturnsCurve(closingPrices);
@@ -58,6 +72,9 @@ int main() {
     std::cout << "Max Drawdown: " << maxDrawdown << std::endl;
     std::cout << "Annualized Return: " << annualizedReturn << std::endl;
     std::cout << "Sortino Ratio: " << sortinoRatio << std::endl;
+
+    // 关闭日志文件
+    logFile.close();
 
     return 0;
 }

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zhangluyu/code/BackTest/include
+CXX_INCLUDES = -I/home/zhangluyu/code/BackTest/include -I/home/zhangluyu/code/BackTest/include/utils
 
 CXX_FLAGS = -std=gnu++17
 

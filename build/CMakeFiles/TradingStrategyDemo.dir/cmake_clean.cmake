@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TradingStrategyDemo.dir/src/Strategy.cpp.o.d"
   "CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.o"
   "CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.o.d"
+  "CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.o"
+  "CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.o.d"
   "TradingStrategyDemo"
   "TradingStrategyDemo.pdb"
 )

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/zhangluyu/code/BackTest/src/StatisticsModule.cpp" "CMakeFiles/TradingStrategyDemo.dir/src/StatisticsModule.cpp.o" "gcc" "CMakeFiles/TradingStrategyDemo.dir/src/StatisticsModule.cpp.o.d"
   "/home/zhangluyu/code/BackTest/src/Strategy.cpp" "CMakeFiles/TradingStrategyDemo.dir/src/Strategy.cpp.o" "gcc" "CMakeFiles/TradingStrategyDemo.dir/src/Strategy.cpp.o.d"
   "/home/zhangluyu/code/BackTest/src/TradeExecutor.cpp" "CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.o" "gcc" "CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.o.d"
+  "/home/zhangluyu/code/BackTest/src/utils/timestamp.cpp" "CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.o" "gcc" "CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.o.d"
   )
 
 # Targets to which this target links.
