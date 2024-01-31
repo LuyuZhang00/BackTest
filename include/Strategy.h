@@ -12,6 +12,8 @@ public:
 
     Signal generateSignal(const std::vector<StockData>& historicalData);
 
+    int getLongWindow() const; // 获取长期移动平均的窗口大小
+
 private:
     int shortWindow;
     int longWindow;

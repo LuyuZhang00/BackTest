@@ -28,3 +28,7 @@ double Strategy::calculateMovingAverage(const std::vector<StockData>& data, int 
                                  });
     return sum / window;
 }
+
+int Strategy::getLongWindow() const {
+    return longWindow;
+}

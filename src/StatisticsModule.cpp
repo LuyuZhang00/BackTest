@@ -1,7 +1,5 @@
 #include "StatisticsModule.h"
-#include <numeric>
-#include <cmath>
-#include <limits>
+#include "PortfolioManager.h"  // 这将包含 Position 结构的定义
 
 StatisticsModule::StatisticsModule() {}
 
@@ -40,10 +38,12 @@ double StatisticsModule::calculateSharpeRatio(const std::vector<double>& returns
     }
 
     double meanReturn = std::accumulate(returns.begin(), returns.end(), 0.0) / returns.size();
-    double stdDeviation = std::sqrt(std::inner_product(returns.begin(), returns.end(), returns.begin(), 0.0) / returns.size() - std::pow(meanReturn, 2));
+    double variance = std::inner_product(returns.begin(), returns.end(), returns.begin(), 0.0) / returns.size() - std::pow(meanReturn, 2);
+    double stdDeviation = std::sqrt(variance);
 
     return (meanReturn - riskFreeRate) / stdDeviation;
 }
+
 
 double StatisticsModule::calculateMaxDrawdown(const std::vector<double>& equityCurve) {
     double peak = -std::numeric_limits<double>::infinity();
