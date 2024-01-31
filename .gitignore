@@ -1,0 +1,56 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+*.DSYM
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+*.exp
+*.pdb
+*.pyd
+*.swp
+*.swo
+target
+.classpath
+.project
+.settings
+.svn
+output
+.idea
+*.iml
+*.pyc
+logs/
+*MANIFEST
+*artifacts
+.DS_Store
+.cache
+*.real
+
