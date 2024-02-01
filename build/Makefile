@@ -169,6 +169,45 @@ PortfolioManagerTest/fast:
 .PHONY : PortfolioManagerTest/fast
 
 #=============================================================================
+# Target rules for targets named TradeExecutorTest
+
+# Build rule for target.
+TradeExecutorTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TradeExecutorTest
+.PHONY : TradeExecutorTest
+
+# fast build rule for target.
+TradeExecutorTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/TradeExecutorTest.dir/build.make test/CMakeFiles/TradeExecutorTest.dir/build
+.PHONY : TradeExecutorTest/fast
+
+#=============================================================================
+# Target rules for targets named StatisticsModuleTest
+
+# Build rule for target.
+StatisticsModuleTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StatisticsModuleTest
+.PHONY : StatisticsModuleTest
+
+# fast build rule for target.
+StatisticsModuleTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StatisticsModuleTest.dir/build.make test/CMakeFiles/StatisticsModuleTest.dir/build
+.PHONY : StatisticsModuleTest/fast
+
+#=============================================================================
+# Target rules for targets named StrategyTest
+
+# Build rule for target.
+StrategyTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StrategyTest
+.PHONY : StrategyTest
+
+# fast build rule for target.
+StrategyTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StrategyTest.dir/build.make test/CMakeFiles/StrategyTest.dir/build
+.PHONY : StrategyTest/fast
+
+#=============================================================================
 # Target rules for targets named check
 
 # Build rule for target.
@@ -218,6 +257,9 @@ help:
 	@echo "... BackTestLib"
 	@echo "... DataLoaderTest"
 	@echo "... PortfolioManagerTest"
+	@echo "... StatisticsModuleTest"
+	@echo "... StrategyTest"
+	@echo "... TradeExecutorTest"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -145,5 +145,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/BackTestLib.dir/DependInfo.cmake"
   "test/CMakeFiles/DataLoaderTest.dir/DependInfo.cmake"
   "test/CMakeFiles/PortfolioManagerTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/TradeExecutorTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/StatisticsModuleTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/StrategyTest.dir/DependInfo.cmake"
   "test/CMakeFiles/check.dir/DependInfo.cmake"
   )

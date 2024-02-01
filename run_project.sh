@@ -25,8 +25,11 @@ make  || { echo "Compilation failed"; exit 1; }
 
 echo "====== Running DataLoaderTest... ======"
 cd "test" || exit
-./DataLoaderTest || { echo "Execution failed";}
-./PortfolioManagerTest || { echo "Execution failed"; }
+./DataLoaderTest || { echo "DataLoaderTest Execution failed";}
+./PortfolioManagerTest || { echo "PortfolioManagerTest Execution failed"; }
+./TradeExecutorTest || { echo "TradeExecutorTest Execution failed"; }
+./StatisticsModuleTest || { echo "StatisticsModuleTest Execution failed"; }
+./StrategyTest || { echo "StrategyTest Execution failed"; }
 cd ..
 
 # 运行编译好的程序

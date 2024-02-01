@@ -100,6 +100,9 @@ src/clean: src/CMakeFiles/BackTestLib.dir/clean
 # Recursive "all" directory target.
 test/all: test/CMakeFiles/DataLoaderTest.dir/all
 test/all: test/CMakeFiles/PortfolioManagerTest.dir/all
+test/all: test/CMakeFiles/TradeExecutorTest.dir/all
+test/all: test/CMakeFiles/StatisticsModuleTest.dir/all
+test/all: test/CMakeFiles/StrategyTest.dir/all
 .PHONY : test/all
 
 # Recursive "preinstall" directory target.
@@ -109,6 +112,9 @@ test/preinstall:
 # Recursive "clean" directory target.
 test/clean: test/CMakeFiles/DataLoaderTest.dir/clean
 test/clean: test/CMakeFiles/PortfolioManagerTest.dir/clean
+test/clean: test/CMakeFiles/TradeExecutorTest.dir/clean
+test/clean: test/CMakeFiles/StatisticsModuleTest.dir/clean
+test/clean: test/CMakeFiles/StrategyTest.dir/clean
 test/clean: test/CMakeFiles/check.dir/clean
 .PHONY : test/clean
 
@@ -215,6 +221,84 @@ PortfolioManagerTest: test/CMakeFiles/PortfolioManagerTest.dir/rule
 test/CMakeFiles/PortfolioManagerTest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/PortfolioManagerTest.dir/build.make test/CMakeFiles/PortfolioManagerTest.dir/clean
 .PHONY : test/CMakeFiles/PortfolioManagerTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/TradeExecutorTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/TradeExecutorTest.dir/all: src/CMakeFiles/BackTestLib.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/TradeExecutorTest.dir/build.make test/CMakeFiles/TradeExecutorTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/TradeExecutorTest.dir/build.make test/CMakeFiles/TradeExecutorTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=22,23,24 "Built target TradeExecutorTest"
+.PHONY : test/CMakeFiles/TradeExecutorTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/TradeExecutorTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/TradeExecutorTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/TradeExecutorTest.dir/rule
+
+# Convenience name for target.
+TradeExecutorTest: test/CMakeFiles/TradeExecutorTest.dir/rule
+.PHONY : TradeExecutorTest
+
+# clean rule for target.
+test/CMakeFiles/TradeExecutorTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/TradeExecutorTest.dir/build.make test/CMakeFiles/TradeExecutorTest.dir/clean
+.PHONY : test/CMakeFiles/TradeExecutorTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/StatisticsModuleTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/StatisticsModuleTest.dir/all: src/CMakeFiles/BackTestLib.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StatisticsModuleTest.dir/build.make test/CMakeFiles/StatisticsModuleTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StatisticsModuleTest.dir/build.make test/CMakeFiles/StatisticsModuleTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=16,17,18 "Built target StatisticsModuleTest"
+.PHONY : test/CMakeFiles/StatisticsModuleTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/StatisticsModuleTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/StatisticsModuleTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/StatisticsModuleTest.dir/rule
+
+# Convenience name for target.
+StatisticsModuleTest: test/CMakeFiles/StatisticsModuleTest.dir/rule
+.PHONY : StatisticsModuleTest
+
+# clean rule for target.
+test/CMakeFiles/StatisticsModuleTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StatisticsModuleTest.dir/build.make test/CMakeFiles/StatisticsModuleTest.dir/clean
+.PHONY : test/CMakeFiles/StatisticsModuleTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/StrategyTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/StrategyTest.dir/all: src/CMakeFiles/BackTestLib.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StrategyTest.dir/build.make test/CMakeFiles/StrategyTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StrategyTest.dir/build.make test/CMakeFiles/StrategyTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=19,20,21 "Built target StrategyTest"
+.PHONY : test/CMakeFiles/StrategyTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/StrategyTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/StrategyTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/StrategyTest.dir/rule
+
+# Convenience name for target.
+StrategyTest: test/CMakeFiles/StrategyTest.dir/rule
+.PHONY : StrategyTest
+
+# clean rule for target.
+test/CMakeFiles/StrategyTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/StrategyTest.dir/build.make test/CMakeFiles/StrategyTest.dir/clean
+.PHONY : test/CMakeFiles/StrategyTest.dir/clean
 
 #=============================================================================
 # Target rules for target test/CMakeFiles/check.dir
