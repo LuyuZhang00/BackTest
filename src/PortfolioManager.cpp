@@ -8,6 +8,10 @@ void PortfolioManager::updatePortfolio(const std::string& symbol, int quantity, 
     updateCash(-quantity * tradePrice);
 }
 
+double PortfolioManager::getCash() const {
+    return cash;
+}
+
 double PortfolioManager::getTotalValue() const {
     double totalValue = cash;
     for (const auto& [symbol, position] : positions) {
@@ -33,3 +37,4 @@ void PortfolioManager::updatePosition(const std::string& symbol, int quantity, d
 void PortfolioManager::updateCash(double amount) {
     cash += amount;
 }
+

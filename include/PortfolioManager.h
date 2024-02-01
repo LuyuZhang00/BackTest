@@ -16,6 +16,9 @@ public:
 
     // 更新投资组合
     void updatePortfolio(const std::string& symbol, int quantity, double tradePrice);
+    
+    // 获取现金余额
+    double getCash() const;
 
     // 获取投资组合的总价值
     double getTotalValue() const;

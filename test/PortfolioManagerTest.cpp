@@ -22,17 +22,18 @@ TEST_F(PortfolioManagerTest, InitialCashBalance) {
 // 测试更新投资组合
 TEST_F(PortfolioManagerTest, UpdatePortfolio) {
     manager.updatePortfolio("AAPL", 100, 150);  // 假设买入 100 股 AAPL，每股 150
-    std::cout << manager.getTotalValue() << std::endl;
+    // std::cout << manager.getTotalValue() << std::endl;
     EXPECT_EQ(manager.getPosition("AAPL").quantity, 100);
     EXPECT_NEAR(manager.getPosition("AAPL").averageCost, 150, 1e-6);
-    EXPECT_NEAR(manager.getTotalValue(), 100000 - 100 * 150, 1e-6);  // 总价值应减少
+    EXPECT_NEAR(manager.getCash(), 85000,1e-6);  // 现金减少 15,000
+    EXPECT_NEAR(manager.getTotalValue(), 100000,1e-6);  // 总价值不减少
 }
 
 // 测试获取头寸信息
 TEST_F(PortfolioManagerTest, GetPosition) {
-    manager.updatePortfolio("AAPL", 10, 150);
+    manager.updatePortfolio("AAPL", 100, 150);
     Position position = manager.getPosition("AAPL");
-    EXPECT_EQ(position.quantity, 10);
+    EXPECT_EQ(position.quantity, 100);
     EXPECT_NEAR(position.averageCost, 150, 1e-6);
 }
 
