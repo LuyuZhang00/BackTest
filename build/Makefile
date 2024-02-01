@@ -142,6 +142,45 @@ BackTestLib/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/BackTestLib.dir/build.make src/CMakeFiles/BackTestLib.dir/build
 .PHONY : BackTestLib/fast
 
+#=============================================================================
+# Target rules for targets named DataLoaderTest
+
+# Build rule for target.
+DataLoaderTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DataLoaderTest
+.PHONY : DataLoaderTest
+
+# fast build rule for target.
+DataLoaderTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/DataLoaderTest.dir/build.make test/CMakeFiles/DataLoaderTest.dir/build
+.PHONY : DataLoaderTest/fast
+
+#=============================================================================
+# Target rules for targets named PortfolioManagerTest
+
+# Build rule for target.
+PortfolioManagerTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PortfolioManagerTest
+.PHONY : PortfolioManagerTest
+
+# fast build rule for target.
+PortfolioManagerTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/PortfolioManagerTest.dir/build.make test/CMakeFiles/PortfolioManagerTest.dir/build
+.PHONY : PortfolioManagerTest/fast
+
+#=============================================================================
+# Target rules for targets named check
+
+# Build rule for target.
+check: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check
+.PHONY : check
+
+# fast build rule for target.
+check/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/build
+.PHONY : check/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -174,8 +213,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... check"
 	@echo "... BackTestDemo"
 	@echo "... BackTestLib"
+	@echo "... DataLoaderTest"
+	@echo "... PortfolioManagerTest"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

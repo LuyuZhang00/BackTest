@@ -4,3 +4,8 @@
 /home/zhangluyu/code/BackTest/build/src/CMakeFiles/BackTestLib.dir
 /home/zhangluyu/code/BackTest/build/src/CMakeFiles/edit_cache.dir
 /home/zhangluyu/code/BackTest/build/src/CMakeFiles/rebuild_cache.dir
+/home/zhangluyu/code/BackTest/build/test/CMakeFiles/DataLoaderTest.dir
+/home/zhangluyu/code/BackTest/build/test/CMakeFiles/PortfolioManagerTest.dir
+/home/zhangluyu/code/BackTest/build/test/CMakeFiles/check.dir
+/home/zhangluyu/code/BackTest/build/test/CMakeFiles/edit_cache.dir
+/home/zhangluyu/code/BackTest/build/test/CMakeFiles/rebuild_cache.dir

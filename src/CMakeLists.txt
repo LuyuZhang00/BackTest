@@ -6,7 +6,6 @@
 # set(CMAKE_CXX_STANDARD 17)
 # set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# 定义一个变量，包含所有的源文件
 set(SOURCE_FILES
     DataLoader.cpp
     PortfolioManager.cpp

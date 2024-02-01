@@ -65,15 +65,18 @@ CMAKE_BINARY_DIR = /home/zhangluyu/code/BackTest/build
 # The main recursive "all" target.
 all: CMakeFiles/BackTestDemo.dir/all
 all: src/all
+all: test/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
+preinstall: test/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/BackTestDemo.dir/clean
 clean: src/clean
+clean: test/clean
 .PHONY : clean
 
 #=============================================================================
@@ -90,6 +93,24 @@ src/preinstall:
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/BackTestLib.dir/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory test
+
+# Recursive "all" directory target.
+test/all: test/CMakeFiles/DataLoaderTest.dir/all
+test/all: test/CMakeFiles/PortfolioManagerTest.dir/all
+.PHONY : test/all
+
+# Recursive "preinstall" directory target.
+test/preinstall:
+.PHONY : test/preinstall
+
+# Recursive "clean" directory target.
+test/clean: test/CMakeFiles/DataLoaderTest.dir/clean
+test/clean: test/CMakeFiles/PortfolioManagerTest.dir/clean
+test/clean: test/CMakeFiles/check.dir/clean
+.PHONY : test/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/BackTestDemo.dir
@@ -142,6 +163,84 @@ BackTestLib: src/CMakeFiles/BackTestLib.dir/rule
 src/CMakeFiles/BackTestLib.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/BackTestLib.dir/build.make src/CMakeFiles/BackTestLib.dir/clean
 .PHONY : src/CMakeFiles/BackTestLib.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/DataLoaderTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/DataLoaderTest.dir/all: src/CMakeFiles/BackTestLib.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/DataLoaderTest.dir/build.make test/CMakeFiles/DataLoaderTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/DataLoaderTest.dir/build.make test/CMakeFiles/DataLoaderTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=10,11,12 "Built target DataLoaderTest"
+.PHONY : test/CMakeFiles/DataLoaderTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/DataLoaderTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/DataLoaderTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/DataLoaderTest.dir/rule
+
+# Convenience name for target.
+DataLoaderTest: test/CMakeFiles/DataLoaderTest.dir/rule
+.PHONY : DataLoaderTest
+
+# clean rule for target.
+test/CMakeFiles/DataLoaderTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/DataLoaderTest.dir/build.make test/CMakeFiles/DataLoaderTest.dir/clean
+.PHONY : test/CMakeFiles/DataLoaderTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/PortfolioManagerTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/PortfolioManagerTest.dir/all: src/CMakeFiles/BackTestLib.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/PortfolioManagerTest.dir/build.make test/CMakeFiles/PortfolioManagerTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/PortfolioManagerTest.dir/build.make test/CMakeFiles/PortfolioManagerTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=13,14,15 "Built target PortfolioManagerTest"
+.PHONY : test/CMakeFiles/PortfolioManagerTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/PortfolioManagerTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/PortfolioManagerTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/PortfolioManagerTest.dir/rule
+
+# Convenience name for target.
+PortfolioManagerTest: test/CMakeFiles/PortfolioManagerTest.dir/rule
+.PHONY : PortfolioManagerTest
+
+# clean rule for target.
+test/CMakeFiles/PortfolioManagerTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/PortfolioManagerTest.dir/build.make test/CMakeFiles/PortfolioManagerTest.dir/clean
+.PHONY : test/CMakeFiles/PortfolioManagerTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/check.dir
+
+# All Build rule for target.
+test/CMakeFiles/check.dir/all:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num= "Built target check"
+.PHONY : test/CMakeFiles/check.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/check.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/check.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/check.dir/rule
+
+# Convenience name for target.
+check: test/CMakeFiles/check.dir/rule
+.PHONY : check
+
+# clean rule for target.
+test/CMakeFiles/check.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/check.dir/build.make test/CMakeFiles/check.dir/clean
+.PHONY : test/CMakeFiles/check.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

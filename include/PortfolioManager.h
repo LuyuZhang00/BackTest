@@ -15,20 +15,20 @@ public:
     PortfolioManager();
 
     // 更新投资组合
-    void updatePortfolio(const std::string& ticker, int quantity, double tradePrice);
+    void updatePortfolio(const std::string& symbol, int quantity, double tradePrice);
 
     // 获取投资组合的总价值
     double getTotalValue() const;
 
-    // 获取指定股票的头寸
-    Position getPosition(const std::string& ticker) const;
+    // 获取指定股票
+    Position getPosition(const std::string& symbol) const;
 
 private:
-    std::map<std::string, Position> positions;  // 持有的股票头寸
+    std::map<std::string, Position> positions;  // 持有的股票
     double cash;                                // 现金余额
 
     // 辅助方法，用于更新头寸和现金
-    void updatePosition(const std::string& ticker, int quantity, double tradePrice);
+    void updatePosition(const std::string& symbol, int quantity, double tradePrice);
     void updateCash(double amount);
 };
 

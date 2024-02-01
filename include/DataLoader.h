@@ -18,10 +18,9 @@ class DataLoader {
 public:
     DataLoader();
     std::vector<StockData> loadData(const std::string& source);
-
-private:
     std::vector<StockData> loadFromCSV(const std::string& filename);
     std::vector<StockData> loadFromDatabase(const std::string& connectionString);
+    std::vector<StockData> loadFromExchange(const std::string& exchange, const std::string& ticker) ;
 };
 
 #endif // DATALOADER_H

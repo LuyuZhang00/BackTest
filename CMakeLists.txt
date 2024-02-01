@@ -12,7 +12,7 @@ include_directories(include/utils/)
 
 # 添加子目录
 add_subdirectory(src)
-
+add_subdirectory(test)
 
 # 添加可执行文件
 add_executable(BackTestDemo main.cpp)

@@ -48,3 +48,9 @@ std::vector<StockData> DataLoader::loadFromDatabase(const std::string& connectio
     // 实现数据库加载逻辑
     return std::vector<StockData>(); // 暂时返回空向量
 }
+
+// 用于从交易所加载数据的函数，暂时留空
+std::vector<StockData> DataLoader::loadFromExchange(const std::string& exchange, const std::string& ticker) {
+    // 实现交易所加载逻辑
+    return std::vector<StockData>(); // 暂时返回空向量
+}

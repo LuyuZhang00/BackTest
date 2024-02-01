@@ -22,7 +22,7 @@ int main() {
         return 1;
     }
 
-    std::string timestamp = getTimestamp();
+    
     // 加载股票数据
     auto stockData = dataLoader.loadData("/home/zhangluyu/code/BackTest/data/stock_data.csv");
 
@@ -43,7 +43,7 @@ int main() {
             auto tradeResult = executor.executeTrade(signal);
 
             // 将交易结果写入日志文件和输出到终端
-            std::string logEntry = timestamp + "Trade on " + dayData.date + " - Signal: " + std::to_string(static_cast<int>(signal))
+            std::string logEntry = getTimestamp() + "Trade on " + dayData.date + " - Signal: " + std::to_string(static_cast<int>(signal))
                                    + ", Result: " + tradeResult.message;
             logFile << logEntry << std::endl;
             std::cout << logEntry << std::endl;
