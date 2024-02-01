@@ -12,8 +12,8 @@ protected:
     // 在每个测试前运行
     void SetUp() override {
         std::ofstream testFile(testCsvFile);
-        testFile << "2023-01-01,100,102,99,101,1000\n";
-        testFile << "2023-01-02,101,103,100,102,1500\n";
+        testFile << "20230101,100,102,99,101,1000\n";
+        testFile << "20230102,101,103,100,102,1500\n";
         testFile.close();
     }
 
@@ -32,7 +32,7 @@ TEST_F(DataLoaderTest, LoadFromCSV) {
     ASSERT_EQ(data.size(), 2);
 
     // 测试第一行数据
-    EXPECT_EQ(data[0].date, "2023-01-01");
+    EXPECT_EQ(data[0].date, "20230101");
     EXPECT_EQ(data[0].open, 100);
     EXPECT_EQ(data[0].high, 102);
     EXPECT_EQ(data[0].low, 99);
@@ -40,7 +40,7 @@ TEST_F(DataLoaderTest, LoadFromCSV) {
     EXPECT_EQ(data[0].volume, 1000);
 
     // 测试第二行数据
-    EXPECT_EQ(data[1].date, "2023-01-02");
+    EXPECT_EQ(data[1].date, "20230102");
     EXPECT_EQ(data[1].open, 101);
     EXPECT_EQ(data[1].high, 103);
     EXPECT_EQ(data[1].low, 100);
@@ -54,7 +54,7 @@ TEST_F(DataLoaderTest, LoadDataCSV) {
     auto data = loader.loadData(testCsvFile);
 
     // 测试第一行数据
-    EXPECT_EQ(data[0].date, "2023-01-01");
+    EXPECT_EQ(data[0].date, "20230101");
     EXPECT_EQ(data[0].open, 100);
     EXPECT_EQ(data[0].high, 102);
     EXPECT_EQ(data[0].low, 99);
@@ -62,7 +62,7 @@ TEST_F(DataLoaderTest, LoadDataCSV) {
     EXPECT_EQ(data[0].volume, 1000);
 
     // 测试第二行数据
-    EXPECT_EQ(data[1].date, "2023-01-02");
+    EXPECT_EQ(data[1].date, "20230102");
     EXPECT_EQ(data[1].open, 101);
     EXPECT_EQ(data[1].high, 103);
     EXPECT_EQ(data[1].low, 100);

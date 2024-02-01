@@ -1,0 +1,243 @@
+Removing existing build directory...
+====== Creating new build directory... ======
+====== Configuring project with CMake... ======
+-- The C compiler identification is GNU 10.2.1
+-- The CXX compiler identification is GNU 10.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.10.0")  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zhangluyu/code/BackTest/build
+====== Building project... ======
+[  4%] Building CXX object src/CMakeFiles/BackTestLib.dir/DataLoader.cpp.o
+[  8%] Building CXX object src/CMakeFiles/BackTestLib.dir/PortfolioManager.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/BackTestLib.dir/StatisticsModule.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/BackTestLib.dir/Strategy.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/BackTestLib.dir/TradeExecutor.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/BackTestLib.dir/utils/timestamp.cpp.o
+[ 29%] Linking CXX static library libBackTestLib.a
+[ 29%] Built target BackTestLib
+[ 33%] Building CXX object CMakeFiles/BackTestDemo.dir/main.cpp.o
+[ 37%] Linking CXX executable BackTestDemo
+[ 37%] Built target BackTestDemo
+[ 41%] Building CXX object test/CMakeFiles/DataLoaderTest.dir/DataLoaderTest.cpp.o
+[ 45%] Building CXX object test/CMakeFiles/DataLoaderTest.dir/test_main.cpp.o
+[ 50%] Linking CXX executable DataLoaderTest
+[ 50%] Built target DataLoaderTest
+[ 54%] Building CXX object test/CMakeFiles/PortfolioManagerTest.dir/PortfolioManagerTest.cpp.o
+[ 58%] Building CXX object test/CMakeFiles/PortfolioManagerTest.dir/test_main.cpp.o
+[ 62%] Linking CXX executable PortfolioManagerTest
+[ 62%] Built target PortfolioManagerTest
+[ 66%] Building CXX object test/CMakeFiles/TradeExecutorTest.dir/TradeExecutorTest.cpp.o
+[ 70%] Building CXX object test/CMakeFiles/TradeExecutorTest.dir/test_main.cpp.o
+[ 75%] Linking CXX executable TradeExecutorTest
+[ 75%] Built target TradeExecutorTest
+[ 79%] Building CXX object test/CMakeFiles/StatisticsModuleTest.dir/StatisticsModuleTest.cpp.o
+[ 83%] Building CXX object test/CMakeFiles/StatisticsModuleTest.dir/test_main.cpp.o
+[ 87%] Linking CXX executable StatisticsModuleTest
+[ 87%] Built target StatisticsModuleTest
+[ 91%] Building CXX object test/CMakeFiles/StrategyTest.dir/StrategyTest.cpp.o
+[ 95%] Building CXX object test/CMakeFiles/StrategyTest.dir/test_main.cpp.o
+[100%] Linking CXX executable StrategyTest
+[100%] Built target StrategyTest
+====== Running DataLoaderTest... ======
+Running main() from /home/zhangluyu/code/BackTest/test/test_main.cpp
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from DataLoaderTest
+[ RUN      ] DataLoaderTest.LoadFromCSV
+[       OK ] DataLoaderTest.LoadFromCSV (0 ms)
+[ RUN      ] DataLoaderTest.LoadDataCSV
+[       OK ] DataLoaderTest.LoadDataCSV (0 ms)
+[ RUN      ] DataLoaderTest.LoadDataUnsupportedSource
+[       OK ] DataLoaderTest.LoadDataUnsupportedSource (0 ms)
+[----------] 3 tests from DataLoaderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+Running main() from /home/zhangluyu/code/BackTest/test/test_main.cpp
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from PortfolioManagerTest
+[ RUN      ] PortfolioManagerTest.InitialCashBalance
+[       OK ] PortfolioManagerTest.InitialCashBalance (0 ms)
+[ RUN      ] PortfolioManagerTest.UpdatePortfolio
+[       OK ] PortfolioManagerTest.UpdatePortfolio (0 ms)
+[ RUN      ] PortfolioManagerTest.GetPosition
+[       OK ] PortfolioManagerTest.GetPosition (0 ms)
+[ RUN      ] PortfolioManagerTest.GetNonExistentPosition
+[       OK ] PortfolioManagerTest.GetNonExistentPosition (0 ms)
+[----------] 4 tests from PortfolioManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+Running main() from /home/zhangluyu/code/BackTest/test/test_main.cpp
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from TradeExecutorTest
+[ RUN      ] TradeExecutorTest.SetTradeParameters
+[       OK ] TradeExecutorTest.SetTradeParameters (0 ms)
+[ RUN      ] TradeExecutorTest.ExecuteTrade
+[       OK ] TradeExecutorTest.ExecuteTrade (0 ms)
+[ RUN      ] TradeExecutorTest.TradeHistory
+[       OK ] TradeExecutorTest.TradeHistory (0 ms)
+[----------] 3 tests from TradeExecutorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+Running main() from /home/zhangluyu/code/BackTest/test/test_main.cpp
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from StatisticsModuleTest
+[ RUN      ] StatisticsModuleTest.CalculateReturnsCurve
+[       OK ] StatisticsModuleTest.CalculateReturnsCurve (0 ms)
+[ RUN      ] StatisticsModuleTest.CalculateInformationCoefficient
+[       OK ] StatisticsModuleTest.CalculateInformationCoefficient (0 ms)
+[ RUN      ] StatisticsModuleTest.CalculateSharpeRatio
+/home/zhangluyu/code/BackTest/test/StatisticsModuleTest.cpp:30: Failure
+The difference between sharpeRatio and 1.73205 is 0.71743974278317912, which exceeds 1e-6, where
+sharpeRatio evaluates to 2.4494897427831792,
+1.73205 evaluates to 1.7320500000000001, and
+1e-6 evaluates to 9.9999999999999995e-07.
+[  FAILED  ] StatisticsModuleTest.CalculateSharpeRatio (0 ms)
+[ RUN      ] StatisticsModuleTest.CalculateMaxDrawdown
+[       OK ] StatisticsModuleTest.CalculateMaxDrawdown (0 ms)
+[ RUN      ] StatisticsModuleTest.CalculateBeta
+[       OK ] StatisticsModuleTest.CalculateBeta (0 ms)
+[ RUN      ] StatisticsModuleTest.CalculateAlpha
+/home/zhangluyu/code/BackTest/test/StatisticsModuleTest.cpp:54: Failure
+The difference between alpha and 0.0 is 0.0099999999999999967, which exceeds 1e-6, where
+alpha evaluates to 0.0099999999999999967,
+0.0 evaluates to 0, and
+1e-6 evaluates to 9.9999999999999995e-07.
+[  FAILED  ] StatisticsModuleTest.CalculateAlpha (1 ms)
+[ RUN      ] StatisticsModuleTest.CalculateAnnualizedReturn
+/home/zhangluyu/code/BackTest/test/StatisticsModuleTest.cpp:61: Failure
+The difference between annualizedReturn and 1.093742 is 1.0637743634764243, which exceeds 1e-6, where
+annualizedReturn evaluates to 0.029967636523575703,
+1.093742 evaluates to 1.093742, and
+1e-6 evaluates to 9.9999999999999995e-07.
+[  FAILED  ] StatisticsModuleTest.CalculateAnnualizedReturn (0 ms)
+[----------] 7 tests from StatisticsModuleTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] StatisticsModuleTest.CalculateSharpeRatio
+[  FAILED  ] StatisticsModuleTest.CalculateAlpha
+[  FAILED  ] StatisticsModuleTest.CalculateAnnualizedReturn
+
+ 3 FAILED TESTS
+StatisticsModuleTest Execution failed
+Running main() from /home/zhangluyu/code/BackTest/test/test_main.cpp
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from StrategyTest
+[ RUN      ] StrategyTest.GenerateSignal
+[       OK ] StrategyTest.GenerateSignal (0 ms)
+[ RUN      ] StrategyTest.InsufficientData
+[       OK ] StrategyTest.InsufficientData (0 ms)
+[----------] 2 tests from StrategyTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+====== Running BackTestDemo... ======
+[2024-02-01 14:49:30.447]  Trade on 2023-01-20 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-21 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-22 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-23 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-24 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-25 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-26 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-27 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-28 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-29 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-30 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-01-31 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-01 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-02 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-03 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-04 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-05 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-06 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-07 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-08 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-09 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-10 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-11 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-12 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-13 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-14 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-15 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-16 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-17 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-18 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-19 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-20 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-21 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-22 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-23 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-24 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-25 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-26 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-27 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-02-28 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-01 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-02 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-03 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-04 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-05 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-06 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-07 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-08 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-09 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-10 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-11 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-12 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-13 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-14 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.447]  Trade on 2023-03-15 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-16 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-17 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-18 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-19 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-20 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-21 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-22 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-23 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-24 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-25 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-26 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-27 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-28 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-29 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-30 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-03-31 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-01 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-02 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-03 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-04 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-05 - Signal: 0, Result: Executed Buy Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-06 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-07 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-08 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-09 - Signal: 1, Result: Executed Sell Order
+[2024-02-01 14:49:30.448]  Trade on 2023-04-10 - Signal: 1, Result: Executed Sell Order
+Sharpe Ratio: -0.0108308
+Max Drawdown: 2.09648
+Annualized Return: -0.992021
+Sortino Ratio: -0.0179905

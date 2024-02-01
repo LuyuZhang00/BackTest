@@ -8,23 +8,34 @@
 #include "StatisticsModule.h"
 #include "utils/timestamp.h"
 
-int main() {
+int main(int argc, char* argv[]) {
+    
+    // 检查命令行参数数量
+    if (argc < 3) {
+        std::cerr << "Usage: " << argv[0] << " <log_file_path> <data_file_path>" << std::endl;
+        return 1;
+    }
+    
+    std::string logFilePath = argv[1];
+    std::string dataFilePath = argv[2];
+
+
+    // 定义并打开日志文件
+    std::ofstream logFile(logFilePath);
+    if (!logFile.is_open()) {
+        std::cerr << "Unable to open log file: " << logFilePath << std::endl;
+        return 1;
+    }
+
     DataLoader dataLoader;
     Strategy strategy(5, 20);  // 使用5天和20天的移动平均
     TradeExecutor executor;
     PortfolioManager portfolioManager;
     StatisticsModule statisticsModule;
-
-    // 定义并打开日志文件
-    std::ofstream logFile("../logs/trade_log.txt");
-    if (!logFile.is_open()) {
-        std::cerr << "Unable to open log file." << std::endl;
-        return 1;
-    }
-
     
     // 加载股票数据
-    auto stockData = dataLoader.loadData("/home/zhangluyu/code/BackTest/data/stock_data.csv");
+    auto stockData = dataLoader.loadData(dataFilePath);
+    
 
     std::vector<StockData> historicalData;
     std::vector<double> closingPrices;
@@ -62,7 +73,6 @@ int main() {
     auto returnsCurve = statisticsModule.calculateReturnsCurve(closingPrices);
     double sharpeRatio = statisticsModule.calculateSharpeRatio(returnsCurve);
 
-    // 假设以下方法已在 StatisticsModule 中实现
     double maxDrawdown = statisticsModule.calculateMaxDrawdown(returnsCurve);
     double annualizedReturn = statisticsModule.calculateAnnualizedReturn(returnsCurve);
     double sortinoRatio = statisticsModule.calculateSortinoRatio(returnsCurve);

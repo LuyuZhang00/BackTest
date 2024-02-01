@@ -1,5 +1,6 @@
 #include "StatisticsModule.h"
 #include "PortfolioManager.h"  // 这将包含 Position 结构的定义
+#include <stdexcept>
 
 StatisticsModule::StatisticsModule() {}
 
@@ -32,16 +33,38 @@ double StatisticsModule::calculateInformationCoefficient(const std::vector<doubl
     return numerator / std::sqrt(denominatorForecast * denominatorActual);
 }
 
-double StatisticsModule::calculateSharpeRatio(const std::vector<double>& returns, double riskFreeRate) {
-    if (returns.empty()) {
-        return std::numeric_limits<double>::quiet_NaN();
+double StatisticsModule::calculateSharpeRatio(const std::vector<double>& periodReturns, char freq, double rfr) {
+    if (periodReturns.empty()) {
+        throw std::invalid_argument("periodReturns is empty.");
     }
 
-    double meanReturn = std::accumulate(returns.begin(), returns.end(), 0.0) / returns.size();
-    double variance = std::inner_product(returns.begin(), returns.end(), returns.begin(), 0.0) / returns.size() - std::pow(meanReturn, 2);
+    std::vector<double> excessReturns(periodReturns.size());
+    std::transform(periodReturns.begin(), periodReturns.end(), excessReturns.begin(),
+                    [rfr](double return_) { return return_ - rfr; });
+
+    // 计算超额收益率的标准差和均值
+    double meanExcessReturn = std::accumulate(excessReturns.begin(), excessReturns.end(), 0.0) / excessReturns.size();
+    double variance = std::inner_product(excessReturns.begin(), excessReturns.end(), excessReturns.begin(), 0.0) / excessReturns.size() - std::pow(meanExcessReturn, 2);
     double stdDeviation = std::sqrt(variance);
 
-    return (meanReturn - riskFreeRate) / stdDeviation;
+    // 年化因子
+    double annualizationFactor = 1.0;
+    if (freq != 0) {
+        switch (freq) {
+            case 'A': // 年
+                annualizationFactor = 1; break;
+            case 'Q': // 季度
+                annualizationFactor = 4; break;
+            case 'M': // 月
+                annualizationFactor = 12; break;
+            case 'D': // 日
+                annualizationFactor = 252; break;
+            default:
+                throw std::invalid_argument("Unsupported frequency.");
+        }
+    }
+
+    return meanExcessReturn / stdDeviation * std::sqrt(annualizationFactor);
 }
 
 

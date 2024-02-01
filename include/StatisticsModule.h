@@ -23,7 +23,7 @@ public:
     double calculateInformationCoefficient(const std::vector<double> &forecasts, const std::vector<double> &actuals);
 
     // 计算夏普比率
-    double calculateSharpeRatio(const std::vector<double> &returns, double riskFreeRate = 0.0);
+    double calculateSharpeRatio(const std::vector<double>& periodReturns, char freq = 0, double rfr = 0.0);
 
     // 计算最大回撤
     double calculateMaxDrawdown(const std::vector<double> &equityCurve);
