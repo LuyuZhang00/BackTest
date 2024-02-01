@@ -1,2 +1,0 @@
-/usr/bin/ar qc libBackTestLib.a CMakeFiles/BackTestLib.dir/DataLoader.cpp.o CMakeFiles/BackTestLib.dir/PortfolioManager.cpp.o CMakeFiles/BackTestLib.dir/StatisticsModule.cpp.o CMakeFiles/BackTestLib.dir/Strategy.cpp.o CMakeFiles/BackTestLib.dir/TradeExecutor.cpp.o CMakeFiles/BackTestLib.dir/utils/timestamp.cpp.o
-/usr/bin/ranlib libBackTestLib.a
