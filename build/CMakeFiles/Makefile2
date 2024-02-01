@@ -63,42 +63,85 @@ CMAKE_BINARY_DIR = /home/zhangluyu/code/BackTest/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TradingStrategyDemo.dir/all
+all: CMakeFiles/BackTestDemo.dir/all
+all: src/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TradingStrategyDemo.dir/clean
+clean: CMakeFiles/BackTestDemo.dir/clean
+clean: src/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TradingStrategyDemo.dir
+# Directory level rules for directory src
+
+# Recursive "all" directory target.
+src/all: src/CMakeFiles/BackTestLib.dir/all
+.PHONY : src/all
+
+# Recursive "preinstall" directory target.
+src/preinstall:
+.PHONY : src/preinstall
+
+# Recursive "clean" directory target.
+src/clean: src/CMakeFiles/BackTestLib.dir/clean
+.PHONY : src/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/BackTestDemo.dir
 
 # All Build rule for target.
-CMakeFiles/TradingStrategyDemo.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target TradingStrategyDemo"
-.PHONY : CMakeFiles/TradingStrategyDemo.dir/all
+CMakeFiles/BackTestDemo.dir/all: src/CMakeFiles/BackTestLib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=1,2 "Built target BackTestDemo"
+.PHONY : CMakeFiles/BackTestDemo.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TradingStrategyDemo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TradingStrategyDemo.dir/all
+CMakeFiles/BackTestDemo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BackTestDemo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
-.PHONY : CMakeFiles/TradingStrategyDemo.dir/rule
+.PHONY : CMakeFiles/BackTestDemo.dir/rule
 
 # Convenience name for target.
-TradingStrategyDemo: CMakeFiles/TradingStrategyDemo.dir/rule
-.PHONY : TradingStrategyDemo
+BackTestDemo: CMakeFiles/BackTestDemo.dir/rule
+.PHONY : BackTestDemo
 
 # clean rule for target.
-CMakeFiles/TradingStrategyDemo.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/clean
-.PHONY : CMakeFiles/TradingStrategyDemo.dir/clean
+CMakeFiles/BackTestDemo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/clean
+.PHONY : CMakeFiles/BackTestDemo.dir/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/BackTestLib.dir
+
+# All Build rule for target.
+src/CMakeFiles/BackTestLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/BackTestLib.dir/build.make src/CMakeFiles/BackTestLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/BackTestLib.dir/build.make src/CMakeFiles/BackTestLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangluyu/code/BackTest/build/CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target BackTestLib"
+.PHONY : src/CMakeFiles/BackTestLib.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/BackTestLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/BackTestLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangluyu/code/BackTest/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/BackTestLib.dir/rule
+
+# Convenience name for target.
+BackTestLib: src/CMakeFiles/BackTestLib.dir/rule
+.PHONY : BackTestLib
+
+# clean rule for target.
+src/CMakeFiles/BackTestLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/BackTestLib.dir/build.make src/CMakeFiles/BackTestLib.dir/clean
+.PHONY : src/CMakeFiles/BackTestLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

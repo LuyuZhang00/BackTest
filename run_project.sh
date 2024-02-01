@@ -25,7 +25,7 @@ make || { echo "Compilation failed"; exit 1; }
 
 # 运行编译好的程序
 echo "Running TradingStrategyDemo..."
-./TradingStrategyDemo || { echo "Execution failed"; exit 1; }
+./BackTestDemo || { echo "Execution failed"; exit 1; }
 
 # 回到初始目录
 cd "$PROJECT_ROOT_DIR" || exit

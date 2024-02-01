@@ -117,24 +117,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TradingStrategyDemo
+# Target rules for targets named BackTestDemo
 
 # Build rule for target.
-TradingStrategyDemo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TradingStrategyDemo
-.PHONY : TradingStrategyDemo
+BackTestDemo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BackTestDemo
+.PHONY : BackTestDemo
 
 # fast build rule for target.
-TradingStrategyDemo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/build
-.PHONY : TradingStrategyDemo/fast
+BackTestDemo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/build
+.PHONY : BackTestDemo/fast
+
+#=============================================================================
+# Target rules for targets named BackTestLib
+
+# Build rule for target.
+BackTestLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BackTestLib
+.PHONY : BackTestLib
+
+# fast build rule for target.
+BackTestLib/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/BackTestLib.dir/build.make src/CMakeFiles/BackTestLib.dir/build
+.PHONY : BackTestLib/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +155,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,152 +163,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BackTestDemo.dir/build.make CMakeFiles/BackTestDemo.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/DataLoader.o: src/DataLoader.cpp.o
-.PHONY : src/DataLoader.o
-
-# target to build an object file
-src/DataLoader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/DataLoader.cpp.o
-.PHONY : src/DataLoader.cpp.o
-
-src/DataLoader.i: src/DataLoader.cpp.i
-.PHONY : src/DataLoader.i
-
-# target to preprocess a source file
-src/DataLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/DataLoader.cpp.i
-.PHONY : src/DataLoader.cpp.i
-
-src/DataLoader.s: src/DataLoader.cpp.s
-.PHONY : src/DataLoader.s
-
-# target to generate assembly for a file
-src/DataLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/DataLoader.cpp.s
-.PHONY : src/DataLoader.cpp.s
-
-src/PortfolioManager.o: src/PortfolioManager.cpp.o
-.PHONY : src/PortfolioManager.o
-
-# target to build an object file
-src/PortfolioManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/PortfolioManager.cpp.o
-.PHONY : src/PortfolioManager.cpp.o
-
-src/PortfolioManager.i: src/PortfolioManager.cpp.i
-.PHONY : src/PortfolioManager.i
-
-# target to preprocess a source file
-src/PortfolioManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/PortfolioManager.cpp.i
-.PHONY : src/PortfolioManager.cpp.i
-
-src/PortfolioManager.s: src/PortfolioManager.cpp.s
-.PHONY : src/PortfolioManager.s
-
-# target to generate assembly for a file
-src/PortfolioManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/PortfolioManager.cpp.s
-.PHONY : src/PortfolioManager.cpp.s
-
-src/StatisticsModule.o: src/StatisticsModule.cpp.o
-.PHONY : src/StatisticsModule.o
-
-# target to build an object file
-src/StatisticsModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/StatisticsModule.cpp.o
-.PHONY : src/StatisticsModule.cpp.o
-
-src/StatisticsModule.i: src/StatisticsModule.cpp.i
-.PHONY : src/StatisticsModule.i
-
-# target to preprocess a source file
-src/StatisticsModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/StatisticsModule.cpp.i
-.PHONY : src/StatisticsModule.cpp.i
-
-src/StatisticsModule.s: src/StatisticsModule.cpp.s
-.PHONY : src/StatisticsModule.s
-
-# target to generate assembly for a file
-src/StatisticsModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/StatisticsModule.cpp.s
-.PHONY : src/StatisticsModule.cpp.s
-
-src/Strategy.o: src/Strategy.cpp.o
-.PHONY : src/Strategy.o
-
-# target to build an object file
-src/Strategy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/Strategy.cpp.o
-.PHONY : src/Strategy.cpp.o
-
-src/Strategy.i: src/Strategy.cpp.i
-.PHONY : src/Strategy.i
-
-# target to preprocess a source file
-src/Strategy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/Strategy.cpp.i
-.PHONY : src/Strategy.cpp.i
-
-src/Strategy.s: src/Strategy.cpp.s
-.PHONY : src/Strategy.s
-
-# target to generate assembly for a file
-src/Strategy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/Strategy.cpp.s
-.PHONY : src/Strategy.cpp.s
-
-src/TradeExecutor.o: src/TradeExecutor.cpp.o
-.PHONY : src/TradeExecutor.o
-
-# target to build an object file
-src/TradeExecutor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.o
-.PHONY : src/TradeExecutor.cpp.o
-
-src/TradeExecutor.i: src/TradeExecutor.cpp.i
-.PHONY : src/TradeExecutor.i
-
-# target to preprocess a source file
-src/TradeExecutor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.i
-.PHONY : src/TradeExecutor.cpp.i
-
-src/TradeExecutor.s: src/TradeExecutor.cpp.s
-.PHONY : src/TradeExecutor.s
-
-# target to generate assembly for a file
-src/TradeExecutor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/TradeExecutor.cpp.s
-.PHONY : src/TradeExecutor.cpp.s
-
-src/utils/timestamp.o: src/utils/timestamp.cpp.o
-.PHONY : src/utils/timestamp.o
-
-# target to build an object file
-src/utils/timestamp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.o
-.PHONY : src/utils/timestamp.cpp.o
-
-src/utils/timestamp.i: src/utils/timestamp.cpp.i
-.PHONY : src/utils/timestamp.i
-
-# target to preprocess a source file
-src/utils/timestamp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.i
-.PHONY : src/utils/timestamp.cpp.i
-
-src/utils/timestamp.s: src/utils/timestamp.cpp.s
-.PHONY : src/utils/timestamp.s
-
-# target to generate assembly for a file
-src/utils/timestamp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingStrategyDemo.dir/build.make CMakeFiles/TradingStrategyDemo.dir/src/utils/timestamp.cpp.s
-.PHONY : src/utils/timestamp.cpp.s
 
 # Help Target
 help:
@@ -305,28 +174,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TradingStrategyDemo"
+	@echo "... BackTestDemo"
+	@echo "... BackTestLib"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/DataLoader.o"
-	@echo "... src/DataLoader.i"
-	@echo "... src/DataLoader.s"
-	@echo "... src/PortfolioManager.o"
-	@echo "... src/PortfolioManager.i"
-	@echo "... src/PortfolioManager.s"
-	@echo "... src/StatisticsModule.o"
-	@echo "... src/StatisticsModule.i"
-	@echo "... src/StatisticsModule.s"
-	@echo "... src/Strategy.o"
-	@echo "... src/Strategy.i"
-	@echo "... src/Strategy.s"
-	@echo "... src/TradeExecutor.o"
-	@echo "... src/TradeExecutor.i"
-	@echo "... src/TradeExecutor.s"
-	@echo "... src/utils/timestamp.o"
-	@echo "... src/utils/timestamp.i"
-	@echo "... src/utils/timestamp.s"
 .PHONY : help
 
 
