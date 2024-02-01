@@ -12,8 +12,8 @@ protected:
     // 在每个测试前运行
     void SetUp() override {
         std::ofstream testFile(testCsvFile);
-        testFile << "20230101,100,102,99,101,1000\n";
-        testFile << "20230102,101,103,100,102,1500\n";
+        testFile << "600519.SH,20230101,100,102,99,101,1000\n";
+        testFile << "600519.SH,20230102,101,103,100,102,1500\n";
         testFile.close();
     }
 

@@ -39,6 +39,8 @@ int main(int argc, char* argv[]) {
 
     std::vector<StockData> historicalData;
     std::vector<double> closingPrices;
+    int sell_count = 0;
+    int buy_count = 0;
 
     // 遍历股票数据
     for (const auto& dayData : stockData) {
@@ -48,6 +50,12 @@ int main(int argc, char* argv[]) {
         if (historicalData.size() >= strategy.getLongWindow()) {
             // 生成交易信号
             auto signal = strategy.generateSignal(historicalData);
+
+            if (signal == Signal::Buy) {
+                buy_count++;
+            } else if (signal == Signal::Sell) {
+                sell_count++;
+            }
 
             // 执行交易
             executor.setTradeParameters(dayData.close, 100); // 假设交易100股
@@ -63,24 +71,25 @@ int main(int argc, char* argv[]) {
             if (tradeResult.success) {
                 // 假设每个交易都是基于单一股票的
                 // 这里需要根据交易结果更新投资组合
-                portfolioManager.updatePortfolio("STOCK_TICKER", 100, dayData.close);
+                portfolioManager.updatePortfolio(dayData.symbol, 100, dayData.close);
             }
         }
+
     }
 
 
     // 计算并显示统计指标
     auto returnsCurve = statisticsModule.calculateReturnsCurve(closingPrices);
     double sharpeRatio = statisticsModule.calculateSharpeRatio(returnsCurve);
-
-    double maxDrawdown = statisticsModule.calculateMaxDrawdown(returnsCurve);
-    double annualizedReturn = statisticsModule.calculateAnnualizedReturn(returnsCurve);
+    double maxDrawdown = statisticsModule.calculateMaxDrawdown(closingPrices);
     double sortinoRatio = statisticsModule.calculateSortinoRatio(returnsCurve);
 
     // 显示结果
+    std::cout << "========== summary ==========" << std::endl;
+    std::cout << "sell_count:   " << sell_count << std::endl;
+    std::cout << "buy_count:    " << buy_count << std::endl;
     std::cout << "Sharpe Ratio: " << sharpeRatio << std::endl;
     std::cout << "Max Drawdown: " << maxDrawdown << std::endl;
-    std::cout << "Annualized Return: " << annualizedReturn << std::endl;
     std::cout << "Sortino Ratio: " << sortinoRatio << std::endl;
 
     // 关闭日志文件

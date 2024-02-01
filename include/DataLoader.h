@@ -6,6 +6,7 @@
 
 // 股票数据的结构，可以根据需求调整
 struct StockData {
+    std::string symbol;
     std::string date;
     double open;
     double high;

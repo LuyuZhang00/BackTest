@@ -30,13 +30,13 @@ std::vector<StockData> DataLoader::loadFromCSV(const std::string& filename) {
         std::string field;
 
         // 解析 CSV 的每一行
+        std::getline(s, stockData.symbol, ',');
         std::getline(s, stockData.date, ',');
         std::getline(s, field, ','); stockData.open = std::stod(field);
         std::getline(s, field, ','); stockData.high = std::stod(field);
         std::getline(s, field, ','); stockData.low = std::stod(field);
         std::getline(s, field, ','); stockData.close = std::stod(field);
         std::getline(s, field, ','); stockData.volume = std::stol(field);
-
         data.push_back(stockData);
     }
 
